@@ -1,8 +1,15 @@
 <template functional>
-  <v-card width="300">
-    <v-card-title>{{props.title}}</v-card-title>
-    <v-card-subtitle>{{props.description}}</v-card-subtitle>
-  </v-card>
+  <v-hover v-slot:default="{ hover }">
+    <v-card
+      width="300"
+      @click="props.callback(props.poi.lng, props.poi.lat)"
+      class="mb-2"
+      :color="hover ? 'indigo lighten-1' : 'indigo'"
+    >
+      <v-card-title>{{props.poi.title}}</v-card-title>
+      <v-card-subtitle>{{props.poi.description}}</v-card-subtitle>
+    </v-card>
+  </v-hover>
 </template>
 
 <script>
@@ -12,8 +19,11 @@ export default {
     title: {
       default: "Titulo"
     },
-    description: {
-      default: "Desc"
+    poi: {
+      type: Object
+    },
+    callback: {
+      type: Function
     }
   }
 };

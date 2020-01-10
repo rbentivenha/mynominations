@@ -1,7 +1,6 @@
 <template>
   <v-app dark>
     <v-app-bar
-      :clipped-left="clipped"
       fixed
       app
     >
@@ -16,7 +15,6 @@
     </v-content>
 
     <v-footer
-      :fixed="fixed"
       app
     >
       <span>&copy; 2019</span>
