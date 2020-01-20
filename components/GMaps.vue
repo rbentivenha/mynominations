@@ -1,5 +1,4 @@
 <template functional>
-  <v-row>
     <v-card width="600">
       <iframe
         width="600"
@@ -12,7 +11,6 @@
         marginwidth="0"
       ></iframe>
     </v-card>
-  </v-row>
 </template>
 
 <script>
